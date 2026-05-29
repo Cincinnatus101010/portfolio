@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
+        with:
+          path: portfolio
+
+      - name: Checkout TroisiUI
+        uses: actions/checkout@v4
+        with:
+          repository: Cincinnatus101010/TroisiUI
+          path: TroisiUI
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.11
+
+      - name: Build TroisiUI
+        working-directory: TroisiUI
+        run: bun install --frozen-lockfile && bun run build
+
+      - name: Lint, typecheck, and build portfolio
+        working-directory: portfolio
+        env:
+          GITHUB_PAGES: "true"
+        run: bun install --frozen-lockfile && bun run lint && bun run typecheck && bun run build
