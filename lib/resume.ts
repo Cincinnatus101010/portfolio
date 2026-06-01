@@ -2,7 +2,7 @@ export const profile = {
 	name: "Ian Troisi",
 	email: "troisiian@gmail.com",
 	github: "https://github.com/Cincinnatus101010",
-	linkedin: "https://www.linkedin.com/in/ian-troisi-a1a4b3412/",
+	linkedin: "https://www.linkedin.com/in/ian-troisi-848ba2411",
 	summary:
 		"Builds production systems from the ground up: Python and Rust backends, Next.js frontends, and React Native / Expo apps with Expo UI. Two granted U.S. patents (Imagine Technologies) for EEG wearables and smart-environment control.",
 };
