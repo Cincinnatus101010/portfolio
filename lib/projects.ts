@@ -4,6 +4,8 @@ interface Project {
 	description: string;
 	tags: string[];
 	href: string;
+	/** In-site path for a live demo. When set, the card opens this first. */
+	showcaseHref?: string;
 }
 
 export const projects: Project[] = [
@@ -14,6 +16,7 @@ export const projects: Project[] = [
 			"Open-source React component library with a from-scratch CSS design system, no Tailwind. Tokens, light/dark themes, 60+ components.",
 		tags: ["React", "TypeScript", "Design system", "Bun"],
 		href: "https://github.com/Cincinnatus101010/TroisiUI",
+		showcaseHref: "/troisiui/",
 	},
 	{
 		id: "clipper-bot",

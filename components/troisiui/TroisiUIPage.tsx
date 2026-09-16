@@ -3,7 +3,9 @@
 import {
 	Button,
 	Container,
+	CopyButton,
 	Icon,
+	Kbd,
 	Stack,
 	ToastProvider,
 	Typography,
@@ -20,6 +22,8 @@ import { TroisiUIShowcase } from "./TroisiUIShowcase";
 
 const NAV = SHOWCASE_NAV;
 type SectionId = ShowcaseSectionId;
+
+const INSTALL = "bun add github:Cincinnatus101010/TroisiUI";
 
 function scrollOffset() {
 	const nav = getComputedStyle(document.documentElement).getPropertyValue(
@@ -174,6 +178,18 @@ export function TroisiUIPage() {
 											</Icon>
 											View on GitHub
 										</Button>
+									</div>
+									<div className="troisi-showcase-hero__install">
+										<code className="troisi-showcase-hero__cmd">{INSTALL}</code>
+										<CopyButton value={INSTALL} label="Copy" />
+										<Typography
+											variant="small"
+											tone="muted"
+											className="troisi-showcase-hero__hint"
+										>
+											Toggle theme with the control in the header, or{" "}
+											<Kbd>system</Kbd> follows your OS.
+										</Typography>
 									</div>
 								</header>
 							</Container>

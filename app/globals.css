@@ -191,6 +191,9 @@ main > section.site-section:nth-of-type(odd) {
 }
 
 .site-project-card__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--troisi-space-2);
 	margin-top: auto;
 	padding-top: var(--troisi-space-2);
 }
@@ -342,6 +345,27 @@ main > section.site-section:nth-of-type(odd) {
 	gap: var(--troisi-space-2);
 }
 
+.troisi-showcase-hero__install {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--troisi-space-3);
+	margin-top: var(--troisi-space-6);
+}
+
+.troisi-showcase-hero__cmd {
+	font-family: var(--troisi-font-mono);
+	font-size: 0.875rem;
+	padding: var(--troisi-space-2) var(--troisi-space-3);
+	border: 1px solid var(--troisi-border);
+	background: var(--troisi-bg-elevated);
+	color: var(--troisi-fg);
+}
+
+.troisi-showcase-hero__hint {
+	flex-basis: 100%;
+}
+
 .site-page-troisiui .troisi-showcase-content .troisi-link,
 .site-page-troisiui .troisi-showcase-content .troisi-link:hover,
 .site-page-troisiui .troisi-showcase-content .troisi-link:focus-visible {
@@ -412,6 +436,7 @@ main > section.site-section:nth-of-type(odd) {
 .troisi-showcase-form .troisi-input,
 .troisi-showcase-form .troisi-textarea,
 .troisi-showcase-form .troisi-select,
+.troisi-showcase-form .troisi-combobox,
 .troisi-showcase-form .troisi-range,
 .troisi-showcase-form .troisi-file-input {
 	width: 100%;

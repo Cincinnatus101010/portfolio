@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Container, Icon, Stack, Typography } from "@troisi/ui";
+import NextLink from "next/link";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { external } from "@/lib/external";
 import { profile } from "@/lib/resume";
@@ -41,16 +42,12 @@ export function Hero() {
 							</Icon>
 							LinkedIn
 						</Button>
-						<Button
-							variant="secondary"
-							onClick={() =>
-								document
-									.getElementById("projects")
-									?.scrollIntoView({ behavior: "smooth" })
-							}
+						<NextLink
+							href="/troisiui/"
+							className="troisi-button troisi-button--secondary troisi-button--md"
 						>
-							View projects
-						</Button>
+							Troisi UI
+						</NextLink>
 					</Stack>
 				</Stack>
 			</Container>

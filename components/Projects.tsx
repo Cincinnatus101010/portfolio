@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge, Button, Card, Icon, Stack } from "@troisi/ui";
+import NextLink from "next/link";
 import { GitHubIcon } from "@/components/icons";
 import { external } from "@/lib/external";
 import { projects } from "@/lib/projects";
@@ -24,6 +25,14 @@ export function Projects() {
 								))}
 							</Stack>
 							<div className="site-project-card__actions">
+								{p.showcaseHref ? (
+									<NextLink
+										href={p.showcaseHref}
+										className="troisi-button troisi-button--primary troisi-button--sm"
+									>
+										Open showcase
+									</NextLink>
+								) : null}
 								<Button
 									variant="secondary"
 									size="sm"

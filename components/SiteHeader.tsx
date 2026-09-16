@@ -108,11 +108,11 @@ export function SiteHeader() {
 				<nav className="site-header-nav__desktop" aria-label="Main">
 					<Stack direction="row" gap={4} align="center">
 						{navLinks}
-						<ThemeToggle />
+						<ThemeToggle id="theme-toggle-desktop" />
 					</Stack>
 				</nav>
 				<div className="site-header-nav__mobile-bar">
-					<ThemeToggle />
+					<ThemeToggle id="theme-toggle-mobile" />
 					<Button
 						type="button"
 						variant="icon"

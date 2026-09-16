@@ -5,10 +5,13 @@ import {
 	Alert,
 	Avatar,
 	Badge,
+	Banner,
 	Box,
 	Breadcrumb,
 	BreadcrumbItem,
 	Button,
+	ButtonGroup,
+	Callout,
 	Card,
 	Carousel,
 	Checkbox,
@@ -16,8 +19,10 @@ import {
 	Code,
 	CodeBlock,
 	ColorInput,
+	Combobox,
 	CommandPalette,
 	Container,
+	CopyButton,
 	DateInput,
 	Divider,
 	Drawer,
@@ -30,6 +35,7 @@ import {
 	Grid,
 	Image,
 	Input,
+	Kbd,
 	Label,
 	Lightbox,
 	Link,
@@ -286,13 +292,18 @@ export function TroisiUIShowcase() {
 
 			<ShowcaseSection id="forms" title="Forms">
 				<ShowcasePanel>
-					<div className="troisi-showcase-row">
+					<ButtonGroup>
 						<Button>Primary</Button>
 						<Button variant="secondary">Secondary</Button>
 						<Button variant="ghost">Ghost</Button>
-						<Button variant="icon" size="sm" aria-label="Icon">
-							★
-						</Button>
+					</ButtonGroup>
+				</ShowcasePanel>
+				<ShowcasePanel>
+					<div className="troisi-showcase-row">
+						<CopyButton value="bun add github:Cincinnatus101010/TroisiUI" />
+						<Typography variant="small" tone="muted">
+							Shortcut <Kbd>⌘</Kbd> <Kbd>K</Kbd>
+						</Typography>
 					</div>
 				</ShowcasePanel>
 				<ShowcasePanel className="troisi-showcase-form">
@@ -317,6 +328,18 @@ export function TroisiUIShowcase() {
 									<option value="eng">Engineer</option>
 									<option value="design">Designer</option>
 								</Select>
+							</FormField>
+							<FormField>
+								<Label htmlFor="demo-combobox">Team</Label>
+								<Combobox
+									id="demo-combobox"
+									placeholder="Search team…"
+									options={[
+										{ value: "eng", label: "Engineering" },
+										{ value: "des", label: "Design" },
+										{ value: "ops", label: "Operations" },
+									]}
+								/>
 							</FormField>
 							<FormField>
 								<Label htmlFor="demo-search">Search</Label>
@@ -429,6 +452,13 @@ export function TroisiUIShowcase() {
 			<ShowcaseSection id="feedback" title="Feedback">
 				<ShowcasePanel>
 					<Stack gap={3}>
+						<Banner>
+							This page is the live library — every control is a real Troisi UI
+							component.
+						</Banner>
+						<Callout variant="info" title="Callout">
+							Use for inline guidance that is not a blocking alert.
+						</Callout>
 						<Alert variant="info" heading="Info">
 							Neutral informational alert.
 						</Alert>
